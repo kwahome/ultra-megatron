@@ -1,0 +1,6 @@
+[package]
+name = "simple-lb-rust"
+version = "0.1.0"
+authors = ["Kelvin Wahome <kevowahome@gmail.com>"]
+
+[dependencies]
