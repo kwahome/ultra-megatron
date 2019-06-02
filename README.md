@@ -1,2 +1,2 @@
-# simple-lb-rust
-simple load balancer in rust
+# ultra-megatron
+A simple DIY load balancer written in rust
