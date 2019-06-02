@@ -1,5 +1,5 @@
 [package]
-name = "ultra-megatron"
+name = "ultra_megatron"
 version = "0.1.0"
 authors = ["Kelvin Wahome <kevowahome@gmail.com>"]
 
