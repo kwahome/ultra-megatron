@@ -3,4 +3,12 @@ name = "ultra_megatron"
 version = "0.1.0"
 authors = ["Kelvin Wahome <kevowahome@gmail.com>"]
 
+[lib]
+name = "server_threadpool"
+path = "src/web_server/lib/lib.rs"
+
+[[bin]]
+name = "web_server"
+path = "src/web_server/main.rs"
+
 [dependencies]

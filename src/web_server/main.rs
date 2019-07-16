@@ -1,4 +1,4 @@
-extern crate ultra_megatron;
+extern crate server_threadpool;
 
 use std::io::prelude::*;
 use std::net::TcpListener;
@@ -6,7 +6,7 @@ use std::net::TcpStream;
 use std::fs::File;
 use std::thread;
 use std::time::Duration;
-use ultra_megatron::ThreadPool;
+use server_threadpool::ThreadPool;
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
@@ -42,7 +42,7 @@ fn handle_connection(mut stream: TcpStream) {
     let (status_line, filename) = if buffer.starts_with(get) {
         ("HTTP/1.1 200 OK\r\n\r\n", "res/hello.html")
     } else if buffer.starts_with(sleep) {
-        thread::sleep(Duration::from_secs(5));
+        thread::sleep(Duration::from_secs(20));
         ("HTTP/1.1 200 OK\r\n\r\n", "res/hello.html")
     } else {
         ("HTTP/1.1 404 NOT FOUND\r\n\r\n", "res/404.html")
