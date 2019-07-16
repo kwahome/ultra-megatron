@@ -1,19 +1,12 @@
 # ultra-megatron
-The goal of this project is to build a load balancer that easily supports Layer
-4 Network Load Balancing but is still modern and general purpose.
+The goal of this project is to build a modern, general purpose and configurable
+load balancer that easily supports Layer 4 Network Load Balancing.
 
-It supports a few modes of operations but some of the features are universal,
-namely health checking backends for availability and hot reloading of the load
-balancer configuration.
+It supports a few modes of operations as well as other universal of backend
+health checking for availability and configuration hot reloading.
 
-Backend configuration can be hot-reloaded, there is no need to restart or even
-reload the process. Simply update the configuration file and save it. The change
-will be noticed and the backend server configuration reloaded making the
-addition or removal of load balanced servers simple.
-
-Right now the only available configuration source is via a configuration file,
-but this could easily be extended to support other configuration sources such as
-a key value store, for example.
+Configuration is driven via a configuration file but this could easily be
+extended to support other configuration sources such as a key value stores etc.
 
 The load balancer runs as a proxy by default since it's likely the most common
 use case but startup configuration facilitates running it in more advanced modes
